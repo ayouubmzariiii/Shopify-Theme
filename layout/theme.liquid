@@ -36,6 +36,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
+          important: true,
           darkMode: "class",
           theme: {
             extend: {
@@ -68,9 +69,9 @@
     {{ content_for_header }}
   </head>
 
-  <body class="bg-background-light dark:bg-background-dark text-[#1b140e] dark:text-[#fbfaf8] transition-colors duration-300 page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  <body class="bg-background-light dark:bg-background-dark text-[#1b140e] dark:text-[#fbfaf8] transition-colors duration-300 antialiased">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
-    <div id="header-group">
+    <div id="header-group" class="sticky top-0 z-50 w-full">
       {% sections 'header-group' %}
     </div>
 
@@ -127,7 +128,7 @@
 
     <main
       id="MainContent"
-      class="content-for-layout"
+      class="content-for-layout w-full max-w-none focus:outline-none"
       role="main"
       data-page-transition-enabled="{{ settings.page_transition_enabled }}"
       data-product-transition="{{ settings.transition_to_main_product }}"
