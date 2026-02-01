@@ -6,46 +6,6 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#C5A059",
-                        "primary-hover": "#b08d4b",
-                        "accent-gold": "#C5A059",
-                        "background-light": "#FDFBF7",
-                        "surface": "#FFFFFF",
-                        "text-main": "#292524",
-                        "text-muted": "#78716c",
-                    },
-                    fontFamily: {
-                        "display": ["Noto Serif", "serif"],
-                        "sans": ["Noto Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-                    boxShadow: {
-                        "soft": "0 10px 40px -10px rgba(0,0,0,0.08)",
-                        "card": "0 10px 25px -5px rgba(0, 0, 0, 0.05)",
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Noto Sans', sans-serif;
-        }
-        h1, h2, h3, h4, .font-display {
-            font-family: 'Noto Serif', serif;
-        }
-    </style>
     {%- if settings.favicon != blank -%}
       <link
         rel="icon"
@@ -78,7 +38,7 @@
     {{ content_for_header }}
   </head>
 
-  <body class="bg-background-light text-text-main transition-colors duration-300 page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
+  <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
     {% render 'skip-to-content-link', href: '#MainContent', text: 'accessibility.skip_to_text' %}
     <div id="header-group">
       {% sections 'header-group' %}
