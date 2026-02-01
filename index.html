@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE | Eternal Brilliance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C5A059",
+                        "primary-hover": "#b08d4b",
+                        "accent-gold": "#C5A059",
+                        "background-light": "#FDFBF7",
+                        "surface": "#FFFFFF",
+                        "text-main": "#292524",
+                        "text-muted": "#78716c",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        "soft": "0 10px 40px -10px rgba(0,0,0,0.08)",
+                        "card": "0 10px 25px -5px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main transition-colors duration-300">
+<header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-stone-100">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-[0.1em] uppercase text-text-main">Luxe</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors uppercase tracking-widest" href="#">Collections</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors uppercase tracking-widest" href="#">Engagement</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors uppercase tracking-widest" href="#">Gifts</a>
+<a class="text-sm font-medium text-text-main hover:text-primary transition-colors uppercase tracking-widest" href="#">Our Story</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<label class="hidden md:flex flex-col w-full max-w-xs h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg bg-stone-100 overflow-hidden border border-stone-200">
+<div class="flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-stone-400 text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 text-sm placeholder:text-stone-400 text-text-main" placeholder="Search Jewelry" type="text"/>
+</div>
+</label>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 text-text-main hover:bg-stone-100 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-stone-200" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbHxGzXQ4haen4rEV4eimjh7t4nJnh3U4VkX_uYBPaNfLoXIfhhaInK7RNtUCzt4pd-jQ2TiO9g9Jq4n-fwoO77Bib4R1NaXZk6NJ4MFwh5M9Li-_y_YHLq7sVk5eJtwisXDIQBisk2ZrRQIecjQs2kqr0rlDba-v4DG1ciQQCMyfHPLhQI9FesVWiDKbxaihcexOz7kSRPDmVrsXoSlApVWQTO-U7d8X4s4T7RmxQlWuNc6Hl84SvS3WlTtky0KkI_iKdssenDB8");'>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-8">
+<section class="mb-24 mt-4">
+<div class="grid lg:grid-cols-2 gap-12 items-center min-h-[500px] rounded-3xl bg-white p-6 md:p-12 shadow-soft border border-stone-100">
+<div class="flex flex-col gap-8 text-left order-2 lg:order-1">
+<div class="flex flex-col gap-4">
+<span class="text-primary uppercase tracking-[0.3em] text-sm font-bold">New Arrival</span>
+<h1 class="text-text-main text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-display">
+                        Eternal Brilliance
+                    </h1>
+<p class="text-text-muted text-lg md:text-xl font-light leading-relaxed italic font-display">
+                        Experience the pinnacle of artisan craftsmanship with our signature Solitaire Collection.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center rounded-lg h-14 px-10 bg-primary text-white text-base font-bold tracking-widest uppercase hover:bg-primary-hover hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                        Explore Now
+                    </button>
+<button class="flex items-center justify-center rounded-lg h-14 px-10 border border-stone-200 text-text-main text-base font-bold tracking-widest uppercase hover:bg-stone-50 transition-colors">
+                        View Lookbook
+                    </button>
+</div>
+</div>
+<div class="relative h-full min-h-[400px] w-full rounded-2xl overflow-hidden order-1 lg:order-2 shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Stunning diamond necklace on dark velvet background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ20DIaooNKTH1Q99b8HXiBtEYf5aNTgOqgmZ6U71UfYPOamc-IaNq4MltmxdrHaV3tGCcU3Oac12Dxf7GBH-QOsqptG_HcUfRhNZMdqsYhP_y4Gqg74HM1pM_XLzfKzpJfxVYvFEWgBvCJxtLbtySDqSOLJZwPNzypJa6S3ejz1kNhXeh2CJGV-2U71SHTQVkDcs_a69PkNVGoy2H1DxRE_ZH3ssWArTBU0R_ZY5DD_DAxcow7_rP6ZFPkbTqnReJAvqREmrpoZA");'></div>
+</div>
+</div>
+</section>
+<div class="flex items-end justify-between mb-8 border-b border-stone-200 pb-6">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold tracking-tighter uppercase text-xs">Curated Selection</span>
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-text-main">Featured Collections</h2>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-2 group" href="#">
+                Browse All <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+<div class="group relative rounded-xl bg-white shadow-card hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-stone-50">
+<div class="aspect-[4/5] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Elegant luxury diamond rings on display" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAR1WZtn2pzV9Sx6nusWBwTEYOVFOm0S2OPAdlKayHimWE0fY6yvtW0HSS9100-C382zf7x6uLqjeZXGRziWjQg-P3U4ydJgfBUWdnCplH0t-joZ2BUwT4iAuQ-Gbi_7IJWEKagRIPoJs0Q_bl_y2fUBGoX7d88Ckg6ceFYdUVICe7IztGgPeElxeiBJ4u-3MG3csUamESbxRMtHcfwl1y39Ob0-a6wH0ljutWYWvfg3oVicnUVebg86_0Bzilvp9A06vWjt6LKN4k");'></div>
+</div>
+<div class="p-6 text-center bg-white relative z-10">
+<p class="text-primary text-xs uppercase tracking-widest mb-2">Collection</p>
+<h3 class="text-text-main text-xl font-bold font-display">Exquisite Rings</h3>
+</div>
+</div>
+<div class="group relative rounded-xl bg-white shadow-card hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-stone-50">
+<div class="aspect-[4/5] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist pearl and gold earrings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiS6XLoMcB5fG8wzD233s8H6sfrl7aGQZh4mHKsIVTh1zwo_H-Zbj15yEJgWqwWdgD2jn42C3AaN98VqJc__PvNUZvj7gpj-Kr-J4o3eyg77lsaVISUaxr0r7VzpnWhrV2LW4coME3OOfX2xbhMuf0pLT8D9X24OddlaINo9wAuquAddCSNvwQxwlQgFQ4-90OFwks5xvxrHU2Yv_jXaNYGE0APLAXJ8gjw3PHQsFe1vZR5Cuw4Vr7W9jz37pJVWU1vBV3QMFcWao");'></div>
+</div>
+<div class="p-6 text-center bg-white relative z-10">
+<p class="text-primary text-xs uppercase tracking-widest mb-2">Collection</p>
+<h3 class="text-text-main text-xl font-bold font-display">Timeless Earrings</h3>
+</div>
+</div>
+<div class="group relative rounded-xl bg-white shadow-card hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-stone-50">
+<div class="aspect-[4/5] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Handcrafted artisan gold bracelets" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2TfmJcx3rWZEjEg83jeFxWMj5gmvLc68MaCKhRE0eSdKB6LvoX-qMkyCfCpevK8GChBxkfOj7f6goQf2ooeUudNLfek318NH2Ve1XN0XZP8ilyLAby4T0kBSzjfVqA9gjuq9b3jZgsBuM8PeAIwSUFtzhSzvfy16HtKj0MDeOzMC_Z_MurCS6v9TS0Yp0xBJOB7oyngkkaANNuKLvKdWSrWmPQvQjC_X6zxkoIj2swcrll8KrHHNj9RcSibml7yUPyjGIv0a4P60");'></div>
+</div>
+<div class="p-6 text-center bg-white relative z-10">
+<p class="text-primary text-xs uppercase tracking-widest mb-2">Collection</p>
+<h3 class="text-text-main text-xl font-bold font-display">Artisan Bracelets</h3>
+</div>
+</div>
+</section>
+<section class="bg-white rounded-3xl p-10 lg:p-16 mb-24 border border-stone-100 shadow-soft">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="flex flex-col gap-6 lg:w-1/2">
+<h2 class="text-4xl md:text-5xl font-bold leading-tight text-text-main">
+                        The Luxe Experience
+                    </h2>
+<p class="text-text-muted text-lg font-light leading-relaxed italic font-display">
+                        For over three generations, we have defined the art of luxury jewelry. Our commitment to excellence ensures every single piece we create is a timeless masterpiece.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<div>
+<h4 class="font-bold text-base mb-1 text-text-main">GIA Certified</h4>
+<p class="text-xs text-text-muted">The world's highest standard in diamond grading.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+<div>
+<h4 class="font-bold text-base mb-1 text-text-main">Ethical Sourcing</h4>
+<p class="text-xs text-text-muted">Ensuring a conflict-free supply chain for every gem.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 lg:w-1/2 w-full">
+<div class="flex items-center gap-6 p-6 rounded-2xl bg-stone-50 border border-stone-100 hover:border-primary transition-colors group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-main">Lifetime Warranty</h3>
+<p class="text-sm text-text-muted">We stand by the quality of our craftsmanship forever.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 rounded-2xl bg-stone-50 border border-stone-100 hover:border-primary transition-colors group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-main">Global Insured Shipping</h3>
+<p class="text-sm text-text-muted">Discreet, fully insured delivery to your doorstep.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 rounded-2xl bg-stone-50 border border-stone-100 hover:border-primary transition-colors group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">draw</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-main">Bespoke Design</h3>
+<p class="text-sm text-text-muted">Work with our artisans to create a one-of-a-kind piece.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-24 relative overflow-hidden rounded-3xl bg-[#F5F0E6] px-8 py-16 flex flex-col items-center text-center border border-primary/10">
+<div class="absolute inset-0 opacity-5 pointer-events-none" data-alt="Geometric luxury pattern abstract background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxJgaWHAkuy5TjWsMXsu0VGv7zlZy93Vcnf0Cqoh6-l9pjpxHX4xv7BC1sl27M7mY2MyWri-dhmyK8QDRCdKp6ThKDgZBwoXZMyNgNLFNCv4DrXYok1v0c3P1rjRZMWjEtmo1mx_b4U-KczGAHttVYm0cQbCHh_tYb-UzFmVAbnfya5ApO0mvCI5O1vM_WtrlhXBYEFk1zsVfX1L3UAFjzuIUw6I1aNmrsV2XYsAamlTekSZQQaueYpak410ULXgJ4BOgkzN2TC6A");'></div>
+<div class="relative z-10 max-w-xl flex flex-col gap-6">
+<h2 class="text-3xl md:text-4xl font-bold text-text-main">Join the Circle of Elegance</h2>
+<p class="text-text-muted font-display italic">Receive early access to limited edition collections and private invitations to our boutique events.</p>
+<form class="flex flex-col sm:flex-row gap-3 mt-4">
+<input class="flex-1 rounded-lg border-stone-200 bg-white px-6 py-4 text-text-main focus:ring-2 focus:ring-primary focus:border-primary placeholder:text-stone-400" placeholder="Your email address" type="email"/>
+<button class="bg-text-main text-white font-bold uppercase tracking-widest px-8 py-4 rounded-lg hover:bg-black transition-colors">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t border-stone-200 pt-20 pb-10">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-[0.1em] uppercase text-text-main">Luxe</h2>
+</div>
+<p class="text-sm text-text-muted font-light leading-relaxed">
+                        Redefining modern luxury through timeless craftsmanship and ethically sourced brilliance.
+                    </p>
+<div class="flex gap-4">
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera_enhance</span></a>
+<a class="text-stone-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Shop</h4>
+<ul class="flex flex-col gap-3 text-sm font-medium text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Engagement Rings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">High Jewelry</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bestsellers</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Company</h4>
+<ul class="flex flex-col gap-3 text-sm font-medium text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Boutiques</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Service</h4>
+<ul class="flex flex-col gap-3 text-sm font-medium text-text-muted">
+<li><a class="hover:text-primary transition-colors" href="#">Jewelry Care</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Book an Appointment</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-stone-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-stone-400">
+<p>© 2024 LUXE Jewelry International. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-stone-600" href="#">Privacy Policy</a>
+<a class="hover:text-stone-600" href="#">Terms of Service</a>
+<a class="hover:text-stone-600" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
