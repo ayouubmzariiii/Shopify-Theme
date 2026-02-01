@@ -1,88 +1,4 @@
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LUXE | Eternal Brilliance</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1152d4",
-                        "accent-gold": "#C5A059",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#101622",
-                    },
-                    fontFamily: {
-                        "display": ["Noto Serif", "serif"],
-                        "sans": ["Noto Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Noto Sans', sans-serif;
-        }
-        h1, h2, h3, .font-display {
-            font-family: 'Noto Serif', serif;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 w-full border-b border-solid border-[#282e39] bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
-<div class="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
-<div class="flex items-center gap-10">
-<div class="flex items-center gap-2 text-primary">
-<div class="size-8">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
-</svg>
-</div>
-<h2 class="text-2xl font-bold tracking-[0.1em] uppercase">Luxe</h2>
-</div>
-<nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Collections</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Engagement</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Gifts</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Our Story</a>
-</nav>
-</div>
-<div class="flex flex-1 justify-end items-center gap-6">
-<label class="hidden md:flex flex-col w-full max-w-xs h-10">
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-[#282e39]/10 dark:bg-[#282e39] overflow-hidden">
-<div class="flex items-center justify-center pl-4">
-<span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
-</div>
-<input class="form-input flex w-full border-none bg-transparent focus:ring-0 text-sm placeholder:text-slate-500" placeholder="Search Jewelry" type="text"/>
-</div>
-</label>
-<div class="flex gap-4">
-<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#282e39]/10 dark:bg-[#282e39] hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined text-[20px]">favorite</span>
-</button>
-<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
-</button>
-</div>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbHxGzXQ4haen4rEV4eimjh7t4nJnh3U4VkX_uYBPaNfLoXIfhhaInK7RNtUCzt4pd-jQ2TiO9g9Jq4n-fwoO77Bib4R1NaXZk6NJ4MFwh5M9Li-_y_YHLq7sVk5eJtwisXDIQBisk2ZrRQIecjQs2kqr0rlDba-v4DG1ciQQCMyfHPLhQI9FesVWiDKbxaihcexOz7kSRPDmVrsXoSlApVWQTO-U7d8X4s4T7RmxQlWuNc6Hl84SvS3WlTtky0KkI_iKdssenDB8");'>
-</div>
-</div>
-</div>
-</header>
-<main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-8">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-8">
 <!-- Hero Section -->
 <section class="mb-16">
 <div class="@container">
@@ -225,65 +141,16 @@
 </form>
 </div>
 </section>
-</main>
-<!-- Footer -->
-<footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 pt-20 pb-10">
-<div class="max-w-[1280px] mx-auto px-6 lg:px-10">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div class="flex flex-col gap-6">
-<div class="flex items-center gap-2 text-primary">
-<div class="size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
-</svg>
 </div>
-<h2 class="text-xl font-bold tracking-[0.1em] uppercase">Luxe</h2>
-</div>
-<p class="text-sm text-slate-500 dark:text-slate-400 font-light leading-relaxed">
-                        Redefining modern luxury through timeless craftsmanship and ethically sourced brilliance.
-                    </p>
-<div class="flex gap-4">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera_enhance</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Shop</h4>
-<ul class="flex flex-col gap-3 text-sm font-medium text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Engagement Rings</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">High Jewelry</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Bestsellers</a></li>
-</ul>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Company</h4>
-<ul class="flex flex-col gap-3 text-sm font-medium text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Boutiques</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-</ul>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Service</h4>
-<ul class="flex flex-col gap-3 text-sm font-medium text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Jewelry Care</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Book an Appointment</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-slate-200 dark:border-slate-900 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-400">
-<p>© 2024 LUXE Jewelry International. All Rights Reserved.</p>
-<div class="flex gap-8">
-<a class="hover:text-slate-200" href="#">Privacy Policy</a>
-<a class="hover:text-slate-200" href="#">Terms of Service</a>
-<a class="hover:text-slate-200" href="#">Accessibility</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+
+{% schema %}
+{
+  "name": "Luxe Home",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Luxe Home"
+    }
+  ]
+}
+{% endschema %}
