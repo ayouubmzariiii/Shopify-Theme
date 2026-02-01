@@ -1,156 +1,394 @@
 <!-- Hero Section - Full Width -->
 <section class="mb-16 w-full">
-<div class="@container">
-<div class="relative overflow-hidden bg-slate-900 h-screen flex items-center justify-center p-8">
-<!-- Hero Background Image -->
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning diamond necklace on dark velvet background" style='background-image: linear-gradient(rgba(16, 22, 34, 0.3) 0%, rgba(16, 22, 34, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ20DIaooNKTH1Q99b8HXiBtEYf5aNTgOqgmZ6U71UfYPOamc-IaNq4MltmxdrHaV3tGCcU3Oac12Dxf7GBH-QOsqptG_HcUfRhNZMdqsYhP_y4Gqg74HM1pM_XLzfKzpJfxVYvFEWgBvCJxtLbtySDqSOLJZwPNzypJa6S3ejz1kNhXeh2CJGV-2U71SHTQVkDcs_a69PkNVGoy2H1DxRE_ZH3ssWArTBU0R_ZY5DD_DAxcow7_rP6ZFPkbTqnReJAvqREmrpoZA");'>
-</div>
-<div class="relative z-10 flex flex-col gap-8 text-center max-w-2xl mx-auto">
-<div class="flex flex-col gap-4">
-<span class="text-accent-gold uppercase tracking-[0.3em] text-sm font-bold">New Arrival</span>
-<h1 class="text-white text-5xl md:text-7xl font-bold leading-tight">
-                                Eternal Brilliance
-                            </h1>
-<p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed font-display italic">
-                                Experience the pinnacle of artisan craftsmanship with our signature Solitaire Collection.
-                            </p>
-</div>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="flex items-center justify-center rounded-lg h-14 px-10 bg-primary text-white text-base font-bold tracking-widest uppercase hover:scale-105 transition-transform shadow-xl shadow-primary/40">
-                                Explore the Collection
-                            </button>
-<button class="flex items-center justify-center rounded-lg h-14 px-10 border border-white/30 text-white text-base font-bold tracking-widest uppercase hover:bg-white/10 backdrop-blur-sm transition-colors">
-                                View Lookbook
-                            </button>
-</div>
-</div>
-</div>
-</div>
+  <div class="@container">
+    <div class="relative overflow-hidden bg-slate-900 h-screen flex items-center justify-center p-8">
+      <!-- Hero Background Image -->
+      {%- if section.settings.hero_image != blank -%}
+        <div class="absolute inset-0 bg-cover bg-center" data-alt="{{ section.settings.hero_image.alt | escape }}" style='background-image: linear-gradient(rgba(16, 22, 34, 0.3) 0%, rgba(16, 22, 34, 0.6) 100%), url("{{ section.settings.hero_image | image_url: width: 2000 }}");'></div>
+      {%- else -%}
+         <div class="absolute inset-0 bg-cover bg-center" style='background-image: linear-gradient(rgba(16, 22, 34, 0.3) 0%, rgba(16, 22, 34, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQ20DIaooNKTH1Q99b8HXiBtEYf5aNTgOqgmZ6U71UfYPOamc-IaNq4MltmxdrHaV3tGCcU3Oac12Dxf7GBH-QOsqptG_HcUfRhNZMdqsYhP_y4Gqg74HM1pM_XLzfKzpJfxVYvFEWgBvCJxtLbtySDqSOLJZwPNzypJa6S3ejz1kNhXeh2CJGV-2U71SHTQVkDcs_a69PkNVGoy2H1DxRE_ZH3ssWArTBU0R_ZY5DD_DAxcow7_rP6ZFPkbTqnReJAvqREmrpoZA");'></div>
+      {%- endif -%}
+      
+      <div class="relative z-10 flex flex-col gap-8 text-center max-w-2xl mx-auto">
+        <div class="flex flex-col gap-4">
+          {%- if section.settings.hero_preheading != blank -%}
+            <span class="text-accent-gold uppercase tracking-[0.3em] text-sm font-bold">{{ section.settings.hero_preheading }}</span>
+          {%- endif -%}
+          <h1 class="text-white text-5xl md:text-7xl font-bold leading-tight">
+             {{ section.settings.hero_heading | default: "Eternal Brilliance" }}
+          </h1>
+          <p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed font-display italic">
+             {{ section.settings.hero_text | default: "Experience the pinnacle of artisan craftsmanship with our signature Solitaire Collection." }}
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          {%- if section.settings.hero_btn_primary_text != blank -%}
+            <a href="{{ section.settings.hero_btn_primary_link }}" class="flex items-center justify-center rounded-lg h-14 px-10 bg-primary text-white text-base font-bold tracking-widest uppercase hover:scale-105 transition-transform shadow-xl shadow-primary/40">
+                {{ section.settings.hero_btn_primary_text }}
+            </a>
+          {%- endif -%}
+           {%- if section.settings.hero_btn_secondary_text != blank -%}
+            <a href="{{ section.settings.hero_btn_secondary_link }}" class="flex items-center justify-center rounded-lg h-14 px-10 border border-white/30 text-white text-base font-bold tracking-widest uppercase hover:bg-white/10 backdrop-blur-sm transition-colors">
+                {{ section.settings.hero_btn_secondary_text }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
-<!-- Section Header -->
-<div class="flex items-end justify-between mb-8 border-b border-slate-200 dark:border-slate-800 pb-6">
-<div class="flex flex-col gap-2">
-<span class="text-primary font-bold tracking-tighter uppercase text-xs">Curated Selection</span>
-<h2 class="text-3xl md:text-4xl font-bold tracking-tight">Featured Collections</h2>
-</div>
-<a class="text-primary font-bold text-sm flex items-center gap-2 group" href="#">
-                Browse All <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-</div>
-<!-- Image Grid -->
-<section class="flex flex-col md:flex-row gap-6 mb-24">
-<!-- Rings -->
-<div class="flex-1 group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[3/4] cursor-pointer">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Elegant luxury diamond rings on display" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAR1WZtn2pzV9Sx6nusWBwTEYOVFOm0S2OPAdlKayHimWE0fY6yvtW0HSS9100-C382zf7x6uLqjeZXGRziWjQg-P3U4ydJgfBUWdnCplH0t-joZ2BUwT4iAuQ-Gbi_7IJWEKagRIPoJs0Q_bl_y2fUBGoX7d88Ckg6ceFYdUVICe7IztGgPeElxeiBJ4u-3MG3csUamESbxRMtHcfwl1y39Ob0-a6wH0ljutWYWvfg3oVicnUVebg86_0Bzilvp9A06vWjt6LKN4k");'>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-8">
-<p class="text-accent-gold text-xs uppercase tracking-widest mb-2">Collection</p>
-<h3 class="text-white text-2xl font-bold">Exquisite Rings</h3>
-<div class="h-0.5 w-0 bg-primary mt-4 transition-all duration-300 group-hover:w-full"></div>
-</div>
-</div>
-<!-- Earrings -->
-<div class="flex-1 group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[3/4] cursor-pointer">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist pearl and gold earrings" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiS6XLoMcB5fG8wzD233s8H6sfrl7aGQZh4mHKsIVTh1zwo_H-Zbj15yEJgWqwWdgD2jn42C3AaN98VqJc__PvNUZvj7gpj-Kr-J4o3eyg77lsaVISUaxr0r7VzpnWhrV2LW4coME3OOfX2xbhMuf0pLT8D9X24OddlaINo9wAuquAddCSNvwQxwlQgFQ4-90OFwks5xvxrHU2Yv_jXaNYGE0APLAXJ8gjw3PHQsFe1vZR5Cuw4Vr7W9jz37pJVWU1vBV3QMFcWao");'>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-8">
-<p class="text-accent-gold text-xs uppercase tracking-widest mb-2">Collection</p>
-<h3 class="text-white text-2xl font-bold">Timeless Earrings</h3>
-<div class="h-0.5 w-0 bg-primary mt-4 transition-all duration-300 group-hover:w-full"></div>
-</div>
-</div>
-<!-- Bracelets -->
-<div class="flex-1 group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[3/4] cursor-pointer">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Handcrafted artisan gold bracelets" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2TfmJcx3rWZEjEg83jeFxWMj5gmvLc68MaCKhRE0eSdKB6LvoX-qMkyCfCpevK8GChBxkfOj7f6goQf2ooeUudNLfek318NH2Ve1XN0XZP8ilyLAby4T0kBSzjfVqA9gjuq9b3jZgsBuM8PeAIwSUFtzhSzvfy16HtKj0MDeOzMC_Z_MurCS6v9TS0Yp0xBJOB7oyngkkaANNuKLvKdWSrWmPQvQjC_X6zxkoIj2swcrll8KrHHNj9RcSibml7yUPyjGIv0a4P60");'>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-8">
-<p class="text-accent-gold text-xs uppercase tracking-widest mb-2">Collection</p>
-<h3 class="text-white text-2xl font-bold">Artisan Bracelets</h3>
-<div class="h-0.5 w-0 bg-primary mt-4 transition-all duration-300 group-hover:w-full"></div>
-</div>
-</div>
-</section>
-<!-- Feature Section -->
-<section class="bg-background-light dark:bg-[#1c1f27] rounded-3xl p-10 lg:p-16 mb-24 border border-slate-200 dark:border-slate-800 shadow-2xl shadow-black/5">
-<div class="flex flex-col lg:flex-row gap-16 items-center">
-<div class="flex flex-col gap-6 lg:w-1/2">
-<h2 class="text-4xl md:text-5xl font-bold leading-tight">
-                        The Luxe Experience
-                    </h2>
-<p class="text-slate-500 dark:text-slate-400 text-lg font-light leading-relaxed italic font-display">
-                        For over three generations, we have defined the art of luxury jewelry. Our commitment to excellence ensures every single piece we create is a timeless masterpiece.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-6 mt-4">
-<div class="flex-1 flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">verified</span>
-<div>
-<h4 class="font-bold text-base mb-1">GIA Certified</h4>
-<p class="text-xs text-slate-500 dark:text-slate-400">The world's highest standard in diamond grading.</p>
-</div>
-</div>
-<div class="flex-1 flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-3xl">public</span>
-<div>
-<h4 class="font-bold text-base mb-1">Ethical Sourcing</h4>
-<p class="text-xs text-slate-500 dark:text-slate-400">Ensuring a conflict-free supply chain for every gem.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-4 lg:w-1/2 w-full">
-<div class="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-background-dark/50 border border-slate-100 dark:border-slate-800 hover:border-primary transition-colors group">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">shield_with_heart</span>
-</div>
-<div class="flex flex-col">
-<h3 class="text-lg font-bold">Lifetime Warranty</h3>
-<p class="text-sm text-slate-500">We stand by the quality of our craftsmanship forever.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-background-dark/50 border border-slate-100 dark:border-slate-800 hover:border-primary transition-colors group">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">local_shipping</span>
-</div>
-<div class="flex flex-col">
-<h3 class="text-lg font-bold">Global Insured Shipping</h3>
-<p class="text-sm text-slate-500">Discreet, fully insured delivery to your doorstep.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-background-dark/50 border border-slate-100 dark:border-slate-800 hover:border-primary transition-colors group">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">draw</span>
-</div>
-<div class="flex flex-col">
-<h3 class="text-lg font-bold">Bespoke Design</h3>
-<p class="text-sm text-slate-500">Work with our artisans to create a one-of-a-kind piece.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Newsletter / Footer-top -->
-<section class="mb-24 relative overflow-hidden rounded-3xl bg-primary px-8 py-16 flex flex-col items-center text-center">
-<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="Geometric luxury pattern abstract background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxJgaWHAkuy5TjWsMXsu0VGv7zlZy93Vcnf0Cqoh6-l9pjpxHX4xv7BC1sl27M7mY2MyWri-dhmyK8QDRCdKp6ThKDgZBwoXZMyNgNLFNCv4DrXYok1v0c3P1rjRZMWjEtmo1mx_b4U-KczGAHttVYm0cQbCHh_tYb-UzFmVAbnfya5ApO0mvCI5O1vM_WtrlhXBYEFk1zsVfX1L3UAFjzuIUw6I1aNmrsV2XYsAamlTekSZQQaueYpak410ULXgJ4BOgkzN2TC6A");'></div>
-<div class="relative z-10 max-w-xl flex flex-col gap-6">
-<h2 class="text-3xl md:text-4xl font-bold text-white">Join the Circle of Elegance</h2>
-<p class="text-white/80 font-display italic">Receive early access to limited edition collections and private invitations to our boutique events.</p>
-<form class="flex flex-col sm:flex-row gap-3 mt-4">
-<input class="flex-1 rounded-lg border-none px-6 py-4 text-slate-900 focus:ring-2 focus:ring-white" placeholder="Your email address" type="email"/>
-<button class="bg-slate-900 text-white font-bold uppercase tracking-widest px-8 py-4 rounded-lg hover:bg-slate-800 transition-colors">Subscribe</button>
-</form>
-</div>
-</section>
+  <!-- Section Header -->
+  <div class="flex items-end justify-between mb-8 border-b border-slate-200 dark:border-slate-800 pb-6">
+    <div class="flex flex-col gap-2">
+      <span class="text-primary font-bold tracking-tighter uppercase text-xs">{{ section.settings.collection_preheading | default: "Curated Selection" }}</span>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">{{ section.settings.collection_heading | default: "Featured Collections" }}</h2>
+    </div>
+    <a class="text-primary font-bold text-sm flex items-center gap-2 group" href="{{ section.settings.collection_link | default: '#' }}">
+      {{ section.settings.collection_link_text | default: "Browse All" }} <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+    </a>
+  </div>
+
+  <!-- Image Grid (Dynamic Blocks) -->
+  <section class="flex flex-col md:flex-row gap-6 mb-24">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'collection_card' -%}
+        {%- assign collection = block.settings.collection -%}
+        {%- assign image = block.settings.custom_image | default: collection.image | default: collection.products.first.featured_image -%}
+        {%- assign title = block.settings.custom_title | default: collection.title -%}
+        {%- assign preheading = block.settings.custom_preheading | default: "Collection" -%}
+        
+        <a href="{{ collection.url | default: '#' }}" class="flex-1 group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[3/4] cursor-pointer" {{ block.shopify_attributes }}>
+           {%- if image != blank -%}
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url("{{ image | image_url: width: 800 }}");'></div>
+           {%- else -%}
+             <!-- Fallback Image if no collection selected -->
+             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAR1WZtn2pzV9Sx6nusWBwTEYOVFOm0S2OPAdlKayHimWE0fY6yvtW0HSS9100-C382zf7x6uLqjeZXGRziWjQg-P3U4ydJgfBUWdnCplH0t-joZ2BUwT4iAuQ-Gbi_7IJWEKagRIPoJs0Q_bl_y2fUBGoX7d88Ckg6ceFYdUVICe7IztGgPeElxeiBJ4u-3MG3csUamESbxRMtHcfwl1y39Ob0-a6wH0ljutWYWvfg3oVicnUVebg86_0Bzilvp9A06vWjt6LKN4k");'></div>
+           {%- endif -%}
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+                <p class="text-accent-gold text-xs uppercase tracking-widest mb-2">{{ preheading }}</p>
+                <h3 class="text-white text-2xl font-bold">{{ title | default: "Collection Name" }}</h3>
+                <div class="h-0.5 w-0 bg-primary mt-4 transition-all duration-300 group-hover:w-full"></div>
+            </div>
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+  </section>
+
+  <!-- Feature Section -->
+  <section class="bg-background-light dark:bg-[#1c1f27] rounded-3xl p-10 lg:p-16 mb-24 border border-slate-200 dark:border-slate-800 shadow-2xl shadow-black/5">
+    <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                {{ section.settings.feature_heading | default: "The Luxe Experience" }}
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-lg font-light leading-relaxed italic font-display">
+                {{ section.settings.feature_text | default: "For over three generations, we have defined the art of luxury jewelry. Our commitment to excellence ensures every single piece we create is a timeless masterpiece." }}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 mt-4">
+                 <div class="flex-1 flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-3xl">{{ section.settings.feature_sub_1_icon | default: "verified" }}</span>
+                    <div>
+                        <h4 class="font-bold text-base mb-1">{{ section.settings.feature_sub_1_title | default: "GIA Certified" }}</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">{{ section.settings.feature_sub_1_text | default: "The world's highest standard in diamond grading." }}</p>
+                    </div>
+                </div>
+                 <div class="flex-1 flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-3xl">{{ section.settings.feature_sub_2_icon | default: "public" }}</span>
+                    <div>
+                        <h4 class="font-bold text-base mb-1">{{ section.settings.feature_sub_2_title | default: "Ethical Sourcing" }}</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">{{ section.settings.feature_sub_2_text | default: "Ensuring a conflict-free supply chain for every gem." }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col gap-4 lg:w-1/2 w-full">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'feature_card' -%}
+                    <div class="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-background-dark/50 border border-slate-100 dark:border-slate-800 hover:border-primary transition-colors group" {{ block.shopify_attributes }}>
+                        <div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                            <span class="material-symbols-outlined text-3xl">{{ block.settings.icon }}</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-lg font-bold">{{ block.settings.title }}</h3>
+                            <p class="text-sm text-slate-500">{{ block.settings.text }}</p>
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="mb-24 relative overflow-hidden rounded-3xl bg-primary px-8 py-16 flex flex-col items-center text-center">
+     {%- if section.settings.newsletter_bg_image != blank -%}
+         <div class="absolute inset-0 opacity-10 pointer-events-none bg-cover bg-center" style='background-image: url("{{ section.settings.newsletter_bg_image | image_url: width: 1200 }}");'></div>
+     {%- else -%}
+         <div class="absolute inset-0 opacity-10 pointer-events-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxJgaWHAkuy5TjWsMXsu0VGv7zlZy93Vcnf0Cqoh6-l9pjpxHX4xv7BC1sl27M7mY2MyWri-dhmyK8QDRCdKp6ThKDgZBwoXZMyNgNLFNCv4DrXYok1v0c3P1rjRZMWjEtmo1mx_b4U-KczGAHttVYm0cQbCHh_tYb-UzFmVAbnfya5ApO0mvCI5O1vM_WtrlhXBYEFk1zsVfX1L3UAFjzuIUw6I1aNmrsV2XYsAamlTekSZQQaueYpak410ULXgJ4BOgkzN2TC6A");'></div>
+     {%- endif -%}
+    
+    <div class="relative z-10 max-w-xl flex flex-col gap-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">{{ section.settings.newsletter_heading | default: "Join the Circle of Elegance" }}</h2>
+      <p class="text-white/80 font-display italic">{{ section.settings.newsletter_text | default: "Receive early access to limited edition collections and private invitations to our boutique events." }}</p>
+      {% form 'customer', class: 'flex flex-col sm:flex-row gap-3 mt-4' %}
+         <input type="hidden" name="contact[tags]" value="newsletter">
+         <input class="flex-1 rounded-lg border-none px-6 py-4 text-slate-900 focus:ring-2 focus:ring-white" name="contact[email]" placeholder="Your email address" type="email" required />
+         <button type="submit" class="bg-slate-900 text-white font-bold uppercase tracking-widest px-8 py-4 rounded-lg hover:bg-slate-800 transition-colors">Subscribe</button>
+      {% endform %}
+    </div>
+  </section>
 </div>
 
 {% schema %}
 {
   "name": "Luxe Home",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_preheading",
+      "label": "Pre-heading",
+      "default": "New Arrival"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Heading",
+      "default": "Eternal Brilliance"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Description",
+      "default": "Experience the pinnacle of artisan craftsmanship with our signature Solitaire Collection."
+    },
+    {
+        "type": "text",
+        "id": "hero_btn_primary_text",
+        "label": "Primary Button Text",
+        "default": "Explore the Collection"
+    },
+    {
+        "type": "url",
+        "id": "hero_btn_primary_link",
+        "label": "Primary Button Link"
+    },
+    {
+        "type": "text",
+        "id": "hero_btn_secondary_text",
+        "label": "Secondary Button Text",
+        "default": "View Lookbook"
+    },
+    {
+        "type": "url",
+        "id": "hero_btn_secondary_link",
+        "label": "Secondary Button Link"
+    },
+    {
+        "type": "header",
+        "content": "Collections Header"
+    },
+    {
+        "type": "text",
+        "id": "collection_preheading",
+        "label": "Pre-heading",
+        "default": "Curated Selection"
+    },
+    {
+        "type": "text",
+        "id": "collection_heading",
+        "label": "Heading",
+        "default": "Featured Collections"
+    },
+    {
+        "type": "text",
+        "id": "collection_link_text",
+        "label": "Link Text",
+        "default": "Browse All"
+    },
+    {
+        "type": "url",
+        "id": "collection_link",
+        "label": "Link URL"
+    },
+    {
+        "type": "header",
+        "content": "Luxe Experience (Left)"
+    },
+    {
+        "type": "text",
+        "id": "feature_heading",
+        "label": "Heading",
+        "default": "The Luxe Experience"
+    },
+    {
+        "type": "textarea",
+        "id": "feature_text",
+        "label": "Description",
+        "default": "For over three generations, we have defined the art of luxury jewelry."
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_1_icon",
+        "label": "Sub-feature 1 Icon (Google Material Symbol)",
+        "default": "verified"
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_1_title",
+        "label": "Sub-feature 1 Title",
+        "default": "GIA Certified"
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_1_text",
+        "label": "Sub-feature 1 Text",
+        "default": "The world's highest standard in diamond grading."
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_2_icon",
+        "label": "Sub-feature 2 Icon (Google Material Symbol)",
+        "default": "public"
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_2_title",
+        "label": "Sub-feature 2 Title",
+        "default": "Ethical Sourcing"
+    },
+    {
+        "type": "text",
+        "id": "feature_sub_2_text",
+        "label": "Sub-feature 2 Text",
+        "default": "Ensuring a conflict-free supply chain for every gem."
+    },
+    {
+        "type": "header",
+        "content": "Newsletter"
+    },
+    {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "Heading",
+        "default": "Join the Circle of Elegance"
+    },
+    {
+        "type": "textarea",
+        "id": "newsletter_text",
+        "label": "Description",
+        "default": "Receive early access to limited edition collections."
+    },
+    {
+        "type": "image_picker",
+        "id": "newsletter_bg_image",
+        "label": "Background Pattern"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_card",
+      "name": "Collection Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image (Optional)"
+        },
+        {
+            "type": "text",
+            "id": "custom_preheading",
+            "label": "Pre-heading",
+            "default": "Collection"
+        },
+        {
+            "type": "text",
+            "id": "custom_title",
+            "label": "Custom Title (Optional)"
+        }
+      ]
+    },
+    {
+      "type": "feature_card",
+      "name": "Feature Card",
+      "limit": 3,
+      "settings": [
+        {
+            "type": "text",
+            "id": "icon",
+            "label": "Icon Name (Google Material Symbol)",
+            "default": "shield_with_heart"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Lifetime Warranty"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Description",
+            "default": "We stand by the quality of our craftsmanship forever."
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Luxe Home"
+      "name": "Luxe Home",
+      "blocks": [
+        {
+            "type": "collection_card"
+        },
+        {
+            "type": "collection_card"
+        },
+        {
+            "type": "collection_card"
+        },
+        {
+            "type": "feature_card",
+            "settings": {
+                "icon": "shield_with_heart",
+                "title": "Lifetime Warranty",
+                "text": "We stand by the quality of our craftsmanship forever."
+            }
+        },
+        {
+            "type": "feature_card",
+            "settings": {
+                "icon": "local_shipping",
+                "title": "Global Insured Shipping",
+                "text": "Discreet, fully insured delivery to your doorstep."
+            }
+        },
+        {
+            "type": "feature_card",
+            "settings": {
+                "icon": "draw",
+                "title": "Bespoke Design",
+                "text": "Work with our artisans to create a one-of-a-kind piece."
+            }
+        }
+      ]
     }
   ]
 }

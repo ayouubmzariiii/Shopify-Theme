@@ -10,10 +10,11 @@
 <h2 class="text-2xl font-bold tracking-[0.1em] uppercase">Luxe</h2>
 </div>
 <nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/90" href="#">Collections</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/90" href="#">Engagement</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/90" href="#">Gifts</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/90" href="#">Our Story</a>
+  {%- for link in section.settings.menu.links -%}
+    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/90" href="{{ link.url }}">
+      {{ link.title }}
+    </a>
+  {%- endfor -%}
 </nav>
 </div>
 <div class="flex flex-1 justify-end items-center gap-6">
@@ -42,6 +43,13 @@
 {% schema %}
 {
   "name": "Luxe Header",
-  "settings": []
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu"
+    }
+  ]
 }
 {% endschema %}
