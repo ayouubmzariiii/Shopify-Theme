@@ -1,6 +1,11 @@
-<header class="sticky top-0 z-50 w-full border-b border-solid border-[#282e39] bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 w-full border-b border-solid border-slate-200 bg-white/90 backdrop-blur-md">
 <div class="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
-<div class="flex items-center gap-10">
+<div class="flex items-center gap-4 lg:gap-10">
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-toggle" class="lg:hidden text-slate-900 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<!-- Logo -->
 <div class="flex items-center gap-2 text-primary">
 <div class="size-8">
 <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -9,16 +14,29 @@
 </div>
 <h2 class="text-2xl font-bold tracking-[0.1em] uppercase">Luxe</h2>
 </div>
+<!-- Desktop Nav -->
 <nav class="hidden lg:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Collections</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Engagement</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Gifts</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Our Story</a>
+<a class="group relative text-sm font-medium uppercase tracking-widest text-slate-900 hover:text-primary transition-colors" href="#">
+                Collections
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="group relative text-sm font-medium uppercase tracking-widest text-slate-900 hover:text-primary transition-colors" href="#">
+                Engagement
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="group relative text-sm font-medium uppercase tracking-widest text-slate-900 hover:text-primary transition-colors" href="#">
+                Gifts
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
+<a class="group relative text-sm font-medium uppercase tracking-widest text-slate-900 hover:text-primary transition-colors" href="#">
+                Our Story
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+</a>
 </nav>
 </div>
 <div class="flex flex-1 justify-end items-center gap-6">
 <label class="hidden md:flex flex-col w-full max-w-xs h-10">
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-[#282e39]/10 dark:bg-[#282e39] overflow-hidden">
+<div class="flex w-full flex-1 items-stretch rounded-lg bg-slate-100 overflow-hidden">
 <div class="flex items-center justify-center pl-4">
 <span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
 </div>
@@ -26,7 +44,7 @@
 </div>
 </label>
 <div class="flex gap-4">
-<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#282e39]/10 dark:bg-[#282e39] hover:bg-primary/20 transition-colors">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 hover:bg-primary/20 hover:text-primary transition-colors text-slate-600">
 <span class="material-symbols-outlined text-[20px]">favorite</span>
 </button>
 <button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
@@ -37,7 +55,66 @@
 </div>
 </div>
 </div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col h-full shadow-2xl">
+<div class="flex items-center justify-between p-6 border-b border-slate-100">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-[0.1em] uppercase">Luxe</h2>
+</div>
+<button id="mobile-menu-close" class="text-slate-900 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col p-6 gap-2 overflow-y-auto">
+<a class="text-xl font-medium py-4 border-b border-slate-100 hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-xl font-medium py-4 border-b border-slate-100 hover:text-primary transition-colors" href="#">Engagement</a>
+<a class="text-xl font-medium py-4 border-b border-slate-100 hover:text-primary transition-colors" href="#">Gifts</a>
+<a class="text-xl font-medium py-4 border-b border-slate-100 hover:text-primary transition-colors" href="#">Our Story</a>
+<div class="mt-8 flex flex-col gap-4">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 border border-slate-200 text-slate-900 font-bold uppercase tracking-widest hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">favorite</span> Wishlist
+</button>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary text-white font-bold uppercase tracking-widest hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span> Cart
+</button>
+</div>
+</nav>
+</div>
+
+<!-- Overlay Backdrop -->
+<div id="mobile-menu-backdrop" class="fixed inset-0 z-[55] bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+
+    function openMenu() {
+        mobileMenu.classList.remove('-translate-x-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    if(menuToggle) menuToggle.addEventListener('click', openMenu);
+    if(menuClose) menuClose.addEventListener('click', closeMenu);
+    if(backdrop) backdrop.addEventListener('click', closeMenu);
+});
+</script>
 
 {% schema %}
 {
