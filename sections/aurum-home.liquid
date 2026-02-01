@@ -1,0 +1,274 @@
+<div class="bg-background-light text-[#1b140e]">
+  <header class="sticky top-0 z-50 bg-background-light/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <div class="size-6 text-primary">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h1 class="text-xl font-bold tracking-[0.2em] uppercase">AURUM</h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
+          {% if linklists.main-menu.links.size > 0 %}
+            {% for link in linklists.main-menu.links %}
+              <a class="hover:text-primary transition-colors" href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+          {% else %}
+            <a class="hover:text-primary transition-colors" href="/collections/all">Shop</a>
+            <a class="hover:text-primary transition-colors" href="/collections">Collections</a>
+            <a class="hover:text-primary transition-colors" href="/pages/our-story">Our Story</a>
+          {% endif %}
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <form class="hidden lg:flex items-center bg-primary/5 rounded-full px-4 py-1.5 border border-primary/10" action="{{ routes.search_url }}" method="get" role="search">
+          <span class="material-symbols-outlined text-primary text-xl">search</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm w-32 xl:w-48 placeholder:text-primary/40" name="q" placeholder="Search collection..." type="search"/>
+        </form>
+        <div class="flex items-center gap-4">
+          <a class="p-2 hover:bg-primary/10 rounded-full transition-colors" href="{{ routes.account_url }}">
+            <span class="material-symbols-outlined">favorite</span>
+          </a>
+          <a class="p-2 hover:bg-primary/10 rounded-full transition-colors relative" href="{{ routes.cart_url }}">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            {% if cart.item_count > 0 %}
+              <span class="absolute top-1 right-1 size-2 bg-primary rounded-full"></span>
+            {% endif %}
+          </a>
+          <a class="size-8 rounded-full bg-cover bg-center border border-primary/20" href="{{ routes.account_url }}" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBchhR-ecwuxfqSOqkEJOji_Mwh9BN4B5vk9QpwOLn-QyHc55u0VyCxRPhNBqULERAXowQ3_duISCZsks9TmCN4dw20Sr-kYXPUYPzLQMeAHwJSv2JyOT6PQAYfo_rQPFRvwP-k64CXPswdtarz7bxXGdbvCWTkn8Xv9w9pWsBk6xTX6SAP5L9ZF3j5zFnWsKLPsVRDfGsCFFLeJVMMhRfR7Af1g0jPjIL5-DBaDSx3vdFlzj2IolhWPotSgPj8WKocHDHsNh9w_0T4');">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-20 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 flex flex-col gap-8">
+          <div class="space-y-4">
+            <span class="text-primary tracking-[0.3em] uppercase text-xs font-bold">New Arrival</span>
+            <h2 class="text-6xl lg:text-8xl font-black leading-[1.1] tracking-tight">
+              Timeless<br/><span class="italic font-light">Elegance</span>
+            </h2>
+            <p class="text-lg lg:text-xl text-primary/70 max-w-md leading-relaxed">
+              Handcrafted fine jewelry designed to be cherished for generations. Discover the artistry of pure 24k gold.
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <a class="bg-primary text-white px-8 py-4 rounded-lg font-bold tracking-wide hover:bg-primary/90 transition-all transform hover:-translate-y-1" href="/collections/all">
+              Shop the Collection
+            </a>
+            <a class="border border-primary/20 px-8 py-4 rounded-lg font-bold tracking-wide hover:bg-primary/5 transition-all" href="/pages/lookbook">
+              View Lookbook
+            </a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl group">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNGGQpO3ft6Mmyg-cA8jGiPEG_l_QMrBuWj7vntW8QJ7uitHSraMC0DmjH6gA_a1U8aFJQ-D-F7TmbVcrlZeqpQsKoV7wbjsA2JrJWvEkubVYRCW1iyRBuzqPkbkuPAJyUQm0FCtd9kBxKii0A6TZZnjpbkRf1aq9uSScDO-8oR_ATRxHyrLxNMP5JkeaIf3wr11qq_yjPEJZb5FGAHMQKzoxWYn1z_gw3-ni1qB0QyltOdVQRiCTt3yPRUjsKrtN558Ch9Nl5ngfh" alt="Close up editorial shot of a luxury gold necklace" loading="eager"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary/5 py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-20">
+        <div class="flex justify-between items-end mb-12">
+          <div class="space-y-2">
+            <h3 class="text-3xl font-bold tracking-tight">Featured Collections</h3>
+            <div class="h-1 w-20 bg-primary"></div>
+          </div>
+          <a class="text-primary font-bold border-b border-primary/30 hover:border-primary pb-1 transition-all" href="/collections">Explore All</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a class="group relative aspect-[16/9] rounded-xl overflow-hidden cursor-pointer" href="/collections/signature-gold-series">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors z-10"></div>
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCWraH99fYQleSPp_3zswldLP7OEerrlwpmiV_uCKwm8Tyj_1qCUQk-FGK7BvsBF5oYdEAK0-t8K0tJvbNk4usU_0YA2jJrkhS43f1eQKFX_BIaZ-ZhRRVlH2Wv6WBUg0jvsZr6_GLSbf8YOTFBwKsjvJERnkLkGk9J2E8-v5bq9FHA-w2IzcL2Do5h6ceB6O-SoVqVFfGeSF1BHiKsBtlqgHCQQRqtulQiZYMcCnT-YaJb8H-Apgms_gPsoBxZOPwyz8CQDMFHtt" alt="Model wearing signature gold series bracelets" loading="lazy"/>
+            <div class="absolute bottom-8 left-8 z-20">
+              <h4 class="text-white text-3xl font-bold">The Signature Gold Series</h4>
+              <p class="text-white/80 mt-2">Pure craftsmanship in every link.</p>
+            </div>
+          </a>
+          <a class="group relative aspect-[16/9] rounded-xl overflow-hidden cursor-pointer" href="/collections/modern-minimalist">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors z-10"></div>
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy9dp7tl_zvR6a3v961kFDhj6s6qsRy3wCwuvT4UD6uQBIqZS7Xn6JYOP-RR1bWULl0iu8_TZBxjMmy-vq45923ybRzuXSq0hUeWkfjI1PVgoVqeBI2zCBnV3ZYLOe_F01t5V0JS4sJ7clQOnclLkmUbed100xSQIO66uvOuVKqLwtj2aRqcUJDSFnbJj9ug0UhyyOlAYsVcq-M0t7qUw7ioP5fWQHOsMs0et_RyVrJFKrh1htb7lSwuAbSqjhydb-XrzqcV01xTws" alt="Minimalist gold rings on a white pedestal" loading="lazy"/>
+            <div class="absolute bottom-8 left-8 z-20">
+              <h4 class="text-white text-3xl font-bold">Modern Minimalist</h4>
+              <p class="text-white/80 mt-2">Beauty in simplicity.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-20 py-24">
+      <div class="flex items-center justify-between mb-12">
+        <h3 class="text-3xl font-bold tracking-tight">Best Sellers</h3>
+        <div class="flex gap-2">
+          <button class="size-10 flex items-center justify-center border border-primary/20 rounded-full hover:bg-primary hover:text-white transition-all" type="button">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="size-10 flex items-center justify-center border border-primary/20 rounded-full hover:bg-primary hover:text-white transition-all" type="button">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group cursor-pointer">
+          <div class="aspect-square rounded-xl bg-[#f3ede8] overflow-hidden mb-4 relative">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBerDKVAs6QrVqg6a24t1sCy4lEn4KAT24F7-wc70w7ozBLEThoeO-rTGxhGVB1jYwsomfvHkgHm77aO6eLfyMZnOyqVo4dhBzjuiWCa0jfmmJrpxNvKpqrafdpgVwKkWanDouflwJ9a7ewIxjULajbNgUaJiiNUwudYkKDX65XVjYLYMq9_n6g4AKLB3UvXXn-ldO6k5b9ANd_YVpUuF5_-eRe-tvAtp5gSPiqhCVuFCmQ4mPEm8K3f117NhI1ZSZldUCDPQ4q61db" alt="Solid gold herringbone chain necklace" loading="lazy"/>
+            <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-primary px-6 py-2 rounded-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg" type="button">
+              Quick Add
+            </button>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg group-hover:text-primary transition-colors">Herringbone Chain</h4>
+            <p class="text-primary/60 text-sm">24k Solid Gold</p>
+            <p class="font-bold text-primary">$1,250</p>
+          </div>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="aspect-square rounded-xl bg-[#f3ede8] overflow-hidden mb-4 relative">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOChE_0PSHFTqsBpHZkJaoB_lSfm9THhYe6dcLVqg84QqiSwckt65-I7TTiYEPOqvs5CGQLeUH94RD5_zQFFWDEVCSkZzjvYsy8xrwEEbzJT7u2Svyg80-T8u6JAcYuGA90ugMHcdV6J4uwXMqdItaMJwxtB41V4S2J14uCaY74-ohzjnj6ZhTe975Qz48hZSeJhuX-JddOnd2BhFVybubnr1cE5jE8Ysgn2H5NtsO5RB_QrtmOyssqajaw5BNhzQuHYLucuAxNcGP" alt="Petite diamond stud earrings in gold" loading="lazy"/>
+            <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-primary px-6 py-2 rounded-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg" type="button">
+              Quick Add
+            </button>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg group-hover:text-primary transition-colors">Petite Diamond Studs</h4>
+            <p class="text-primary/60 text-sm">Ethically Sourced Diamonds</p>
+            <p class="font-bold text-primary">$890</p>
+          </div>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="aspect-square rounded-xl bg-[#f3ede8] overflow-hidden mb-4 relative">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkgKC9I4R3nQQa-adIyp6eM7LLYH6Fvl7hrq73-R_DMnz1vdGUDOkDb-0XEsjAE8gJSfAYg57WUndMpNMQgpur-NwL7HYIrnS6zED2Mnl4-SUZwgOCIxNtQP0wS_a3dRHGeOjPIwC9DXRbpmkwsjswWb6TK63IDWWlk0l3oZceV8HjZFkdK7axJgwFtal8uYRey0DnAL2Sk8k3kVQHfIeaPDXURWPqVSkYOEGeAfbWnF73kB3fPiCNugvJXBO2g3ov1CrYFiNIW1z8" alt="Architectural gold band ring" loading="lazy"/>
+            <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-primary px-6 py-2 rounded-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg" type="button">
+              Quick Add
+            </button>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg group-hover:text-primary transition-colors">Architectural Band</h4>
+            <p class="text-primary/60 text-sm">18k Yellow Gold</p>
+            <p class="font-bold text-primary">$550</p>
+          </div>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="aspect-square rounded-xl bg-[#f3ede8] overflow-hidden mb-4 relative">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCu5fk2lLjDP78d4f4SDI0gqupnNH7d67eowy1Te3BUW2xCCB5nPjWUS9fOIKL_ncvZrF1KYN83TYPfDCArCaQtDB0Bkbk8EWX3JnJ9iZr4FcuFxBp5ElOAF2CEQ9PBga63t_Ho35iTcig-fPicIT1KoTjujlyzwQ6_CmoNtB2NNbuIWS2J0YOrNvPenvOtJxugqjN5U6NBk5thSwIOSGXE4O1ovouItXnnLhJe8IX10o9lrvnj-nKI19Gja60TVetY9uNfGLbiND0" alt="Classic gold tennis bracelet" loading="lazy"/>
+            <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white text-primary px-6 py-2 rounded-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg" type="button">
+              Quick Add
+            </button>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-bold text-lg group-hover:text-primary transition-colors">Classic Tennis Bracelet</h4>
+            <p class="text-primary/60 text-sm">Pavé Setting Gold</p>
+            <p class="font-bold text-primary">$2,100</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-primary/10 bg-white/90">
+      <div class="max-w-7xl mx-auto px-6 lg:px-20 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex items-center gap-4 justify-center">
+          <span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest">Free Express Shipping</p>
+            <p class="text-xs text-primary/60">On all orders over $500</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-center md:border-x border-primary/10">
+          <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest">Authenticity Guaranteed</p>
+            <p class="text-xs text-primary/60">Certified pure gold hallmarks</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 justify-center">
+          <span class="material-symbols-outlined text-primary text-3xl">shield_moon</span>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest">Lifetime Warranty</p>
+            <p class="text-xs text-primary/60">Our promise to your legacy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-background-light px-6 lg:px-20 pt-20 pb-10 border-t border-primary/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div class="col-span-1 md:col-span-1 space-y-6">
+          <div class="flex items-center gap-2 text-primary">
+            <div class="size-6">
+              <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold tracking-[0.2em] uppercase text-[#1b140e]">AURUM</h4>
+          </div>
+          <p class="text-primary/60 leading-relaxed text-sm">
+            Crafting heirlooms for the modern era. We believe in the power of fine jewelry to tell stories that transcend time.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-primary/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+            <a class="text-primary/40 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <h5 class="font-bold text-xs uppercase tracking-widest">Boutique</h5>
+          <ul class="space-y-4 text-sm text-primary/60">
+            <li><a class="hover:text-primary" href="/collections/all">All Jewelry</a></li>
+            <li><a class="hover:text-primary" href="/pages/bespoke-design">Bespoke Design</a></li>
+            <li><a class="hover:text-primary" href="/pages/engraving">Engraving</a></li>
+            <li><a class="hover:text-primary" href="/collections/new">New In</a></li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h5 class="font-bold text-xs uppercase tracking-widest">Client Service</h5>
+          <ul class="space-y-4 text-sm text-primary/60">
+            <li><a class="hover:text-primary" href="/pages/contact">Contact Us</a></li>
+            <li><a class="hover:text-primary" href="/pages/shipping-returns">Shipping &amp; Returns</a></li>
+            <li><a class="hover:text-primary" href="/pages/jewelry-care">Jewelry Care</a></li>
+            <li><a class="hover:text-primary" href="/pages/ring-sizing">Ring Sizing</a></li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h5 class="font-bold text-xs uppercase tracking-widest">Join the Circle</h5>
+          <p class="text-sm text-primary/60">Sign up for early access to new collections and exclusive stories.</p>
+          <form class="flex flex-col gap-2" method="post" action="{{ routes.root_url }}">
+            <div class="flex border-b border-primary/20 pb-2">
+              <input class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full placeholder:text-primary/30" name="contact[email]" placeholder="Email address" type="email" required/>
+              <button class="text-primary text-sm font-bold uppercase tracking-widest" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-primary/5 text-[10px] text-primary/40 uppercase tracking-widest font-bold">
+        <p>© 2024 AURUM FINE JEWELRY. ALL RIGHTS RESERVED.</p>
+        <div class="flex gap-8 mt-4 md:mt-0">
+          <a href="/policies/privacy-policy">Privacy Policy</a>
+          <a href="/policies/terms-of-service">Terms of Service</a>
+          <a href="/policies/accessibility">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+{% schema %}
+{
+  "name": "Aurum Home",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Aurum Home"
+    }
+  ]
+}
+{% endschema %}
