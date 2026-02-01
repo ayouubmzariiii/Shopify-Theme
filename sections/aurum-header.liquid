@@ -1,0 +1,47 @@
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-10">
+      <div class="flex items-center gap-2 group cursor-pointer">
+        <div class="size-6 text-primary">
+          <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h1 class="text-xl font-bold tracking-[0.2em] uppercase">AURUM</h1>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
+        <a class="hover:text-primary transition-colors" href="#">Shop</a>
+        <a class="hover:text-primary transition-colors" href="#">Collections</a>
+        <a class="hover:text-primary transition-colors" href="#">Our Story</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-6">
+      <div class="hidden lg:flex items-center bg-primary/5 dark:bg-white/5 rounded-full px-4 py-1.5 border border-primary/10">
+        <span class="material-symbols-outlined text-primary text-xl">search</span>
+        <input class="bg-transparent border-none focus:ring-0 text-sm w-32 xl:w-48 placeholder:text-primary/40" placeholder="Search collection..." type="text"/>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+          <span class="material-symbols-outlined">favorite</span>
+        </button>
+        <button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="absolute top-1 right-1 size-2 bg-primary rounded-full"></span>
+        </button>
+        <div class="size-8 rounded-full bg-cover bg-center border border-primary/20" data-alt="User profile portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBchhR-ecwuxfqSOqkEJOji_Mwh9BN4B5vk9QpwOLn-QyHc55u0VyCxRPhNBqULERAXowQ3_duISCZsks9TmCN4dw20Sr-kYXPUYPzLQMeAHwJSv2JyOT6PQAYfo_rQPFRvwP-k64CXPswdtarz7bxXGdbvCWTkn8Xv9w9pWsBk6xTX6SAP5L9ZF3j5zFnWsKLPsVRDfGsCFFLeJVMMhRfR7Af1g0jPjIL5-DBaDSx3vdFlzj2IolhWPotSgPj8WKocHDHsNh9w_0T4');"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Aurum Header",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Aurum Header"
+    }
+  ]
+}
+{% endschema %}
